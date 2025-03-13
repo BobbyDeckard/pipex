@@ -53,6 +53,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	unsigned int	front_trim;
 	unsigned int	back_trim;
 
+	if (!s1 || !set)
+		return (NULL);
 	back_trim = 0;
 	front_trim = count_front_trim(s1, set);
 	if (front_trim != ft_strlen(s1))

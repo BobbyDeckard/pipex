@@ -86,6 +86,8 @@ char	**ft_split(const char *s, char c)
 	char			**tab;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	tab = (char **) malloc(count_elements(s, c) * sizeof(char *));
 	if (!tab)
 		return (NULL);

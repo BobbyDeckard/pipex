@@ -29,7 +29,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
-	if (start >= ft_strlen(s))
+	if (!s)
+		return (NULL);
+	else if (start >= ft_strlen(s))
 		return ((char *) ft_calloc(1, sizeof(char)));
 	sub = (char *) malloc(get_size(s, start, len));
 	if (!sub)

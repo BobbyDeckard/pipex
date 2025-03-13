@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*dst_cast;
 	unsigned char	*src_cast;
 
-	if (!src && !dst)
+	if (!src || !dst)
 		return (NULL);
 	if (!verify_overlap(dst, src, len))
 		ft_memcpy(dst, src, len);

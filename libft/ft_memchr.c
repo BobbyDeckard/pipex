@@ -14,10 +14,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
 	const unsigned char	*ptr;
 	unsigned char		needle;
+	size_t				i;
 
+	if (!s)
+		return (NULL);
 	i = -1;
 	ptr = (unsigned char *) s;
 	needle = (unsigned char) c;
