@@ -58,7 +58,6 @@ void	exec(t_pip *pip, char **envp)
 	pid2 = make_fork(pip, pip->cmd2_path, pip->fd_out);
 	if (pid2 == 0)
 		exec_cmd2(pip, envp);
-	close_fds(pip);
 	waitpid(pid1, NULL, 0);
 	waitpid(pid2, NULL, 0);
 }
