@@ -12,7 +12,7 @@
 
 NAME = pipex
 CC = cc
-CFLAGS = -Wextra -Wall -Werror
+CFLAGS = -Wextra -Wall -Werror -g
 RM = rm
 RMFLAGS = -f
 MAKE = make
